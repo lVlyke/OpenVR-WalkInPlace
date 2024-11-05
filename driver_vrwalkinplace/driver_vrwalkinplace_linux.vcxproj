@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{83b40763-6ae7-4db5-b90a-9d940755bbc5}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>driver_vrwalkinplace_linux</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{2238F9CD-F817-4ECC-BD14-2524D2669B35}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>Remote_GCC_1_0</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <RemoteRootDir>/tmp/vsbuild/OpenVR-WalkInPlace</RemoteRootDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Remote_GCC_1_0</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <RemoteRootDir>/tmp/vsbuild/OpenVR-WalkInPlace</RemoteRootDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>Remote_GCC_1_0</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <RemoteRootDir>/tmp/vsbuild/OpenVR-WalkInPlace</RemoteRootDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Remote_GCC_1_0</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <RemoteRootDir>/tmp/vsbuild/OpenVR-WalkInPlace</RemoteRootDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>Remote_GCC_1_0</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <RemoteRootDir>/tmp/vsbuild/OpenVR-WalkInPlace</RemoteRootDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Remote_GCC_1_0</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <RemoteRootDir>/tmp/vsbuild/OpenVR-WalkInPlace</RemoteRootDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Remote_GCC_1_0</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <RemoteRootDir>/tmp/vsbuild/OpenVR-WalkInPlace</RemoteRootDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>Remote_GCC_1_0</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <RemoteRootDir>/tmp/vsbuild/OpenVR-WalkInPlace</RemoteRootDir>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="..\env.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <Import Project="..\env.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <Import Project="..\env.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <Import Project="..\env.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <Import Project="..\env.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <Import Project="..\env.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="..\env.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <Import Project="..\env.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <IncludePath>$(RemoteRootDir)/lib_vrwalkinplace_linux/include;</IncludePath>
+    <CopyAdditionalIncludes>true</CopyAdditionalIncludes>
+    <TargetExt>.so</TargetExt>
+    <TargetName>libDriverWalkInPlace</TargetName>
+    <MultiProcNumber>8</MultiProcNumber>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <IncludePath>$(RemoteRootDir)/lib_vrwalkinplace_linux/include;</IncludePath>
+    <CopyAdditionalIncludes>true</CopyAdditionalIncludes>
+    <TargetExt>.so</TargetExt>
+    <TargetName>libDriverWalkInPlace</TargetName>
+    <MultiProcNumber>8</MultiProcNumber>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <IncludePath>$(RemoteRootDir)/lib_vrwalkinplace_linux/include;</IncludePath>
+    <CopyAdditionalIncludes>true</CopyAdditionalIncludes>
+    <TargetExt>.so</TargetExt>
+    <TargetName>libDriverWalkInPlace</TargetName>
+    <MultiProcNumber>8</MultiProcNumber>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <IncludePath>$(RemoteRootDir)/lib_vrwalkinplace_linux/include;</IncludePath>
+    <CopyAdditionalIncludes>true</CopyAdditionalIncludes>
+    <TargetExt>.so</TargetExt>
+    <TargetName>libDriverWalkInPlace</TargetName>
+    <MultiProcNumber>8</MultiProcNumber>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(RemoteRootDir)/lib_vrwalkinplace_linux/include;$(RemoteRootDir)/vcpkg_installed/x64-linux/include</IncludePath>
+    <CopyAdditionalIncludes>true</CopyAdditionalIncludes>
+    <TargetExt>.so</TargetExt>
+    <TargetName>libDriverWalkInPlace</TargetName>
+    <MultiProcNumber>8</MultiProcNumber>
+    <LibraryPath>$(RemoteRootDir)/vcpkg_installed/x64-linux/debug/lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(RemoteRootDir)/lib_vrwalkinplace_linux/include;$(RemoteRootDir)/vcpkg_installed/x64-linux/include</IncludePath>
+    <CopyAdditionalIncludes>true</CopyAdditionalIncludes>
+    <TargetExt>.so</TargetExt>
+    <TargetName>libDriverWalkInPlace</TargetName>
+    <LibraryPath>$(RemoteRootDir)/vcpkg_installed/x64-linux/lib;$(LibraryPath)</LibraryPath>
+    <MultiProcNumber>8</MultiProcNumber>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <IncludePath>$(RemoteRootDir)/lib_vrwalkinplace_linux/include;</IncludePath>
+    <CopyAdditionalIncludes>true</CopyAdditionalIncludes>
+    <TargetExt>.so</TargetExt>
+    <TargetName>libDriverWalkInPlace</TargetName>
+    <MultiProcNumber>8</MultiProcNumber>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <IncludePath>$(RemoteRootDir)/lib_vrwalkinplace_linux/include;</IncludePath>
+    <CopyAdditionalIncludes>true</CopyAdditionalIncludes>
+    <TargetExt>.so</TargetExt>
+    <TargetName>libDriverWalkInPlace</TargetName>
+    <MultiProcNumber>8</MultiProcNumber>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClInclude Include="src\com\shm\driver_ipc_shm.h" />
+    <ClInclude Include="src\driver\ServerDriver.h" />
+    <ClInclude Include="src\logging.h" />
+    <ClInclude Include="src\virtualdevice\VirtualController.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\com\shm\driver_ipc_shm.cpp" />
+    <ClCompile Include="src\driver\ServerDriver.cpp" />
+    <ClCompile Include="src\driver_vrwalkinplace.cpp" />
+    <ClCompile Include="src\virtualdevice\VirtualController.cpp" />
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <CppLanguageStandard>c++17</CppLanguageStandard>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>easyloggingpp</LibraryDependencies>
+      <OutputFile>lib\$(TargetFileName)</OutputFile>
+    </Link>
+    <PreBuildEvent>
+      <AdditionalSourcesToCopyMapping>$(SolutionDir)vcpkg.json:=$(RemoteRootDir)/vcpkg.json</AdditionalSourcesToCopyMapping>
+    </PreBuildEvent>
+    <RemotePreBuildEvent>
+      <Command>cd $(RemoteRootDir) &amp;&amp; $(VCPKG_ROOT)vcpkg install</Command>
+      <Message>Installing Dependencies:</Message>
+    </RemotePreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <CppLanguageStandard>c++17</CppLanguageStandard>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>easyloggingpp</LibraryDependencies>
+      <OutputFile>lib\$(TargetFileName)</OutputFile>
+    </Link>
+    <PreBuildEvent>
+      <AdditionalSourcesToCopyMapping>$(SolutionDir)vcpkg.json:=$(RemoteRootDir)/vcpkg.json</AdditionalSourcesToCopyMapping>
+    </PreBuildEvent>
+    <RemotePreBuildEvent>
+      <Command>cd $(RemoteRootDir) &amp;&amp; $(VCPKG_ROOT)vcpkg install</Command>
+      <Message>Installing Dependencies:</Message>
+    </RemotePreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <ClCompile>
+      <CppLanguageStandard>c++17</CppLanguageStandard>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>easyloggingpp</LibraryDependencies>
+      <OutputFile>lib\$(TargetFileName)</OutputFile>
+    </Link>
+    <PreBuildEvent>
+      <AdditionalSourcesToCopyMapping>$(SolutionDir)vcpkg.json:=$(RemoteRootDir)/vcpkg.json</AdditionalSourcesToCopyMapping>
+    </PreBuildEvent>
+    <RemotePreBuildEvent>
+      <Command>cd $(RemoteRootDir) &amp;&amp; $(VCPKG_ROOT)vcpkg install</Command>
+      <Message>Installing Dependencies:</Message>
+    </RemotePreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <ClCompile>
+      <CppLanguageStandard>c++17</CppLanguageStandard>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>easyloggingpp</LibraryDependencies>
+      <OutputFile>lib\$(TargetFileName)</OutputFile>
+    </Link>
+    <PreBuildEvent>
+      <AdditionalSourcesToCopyMapping>$(SolutionDir)vcpkg.json:=$(RemoteRootDir)/vcpkg.json</AdditionalSourcesToCopyMapping>
+    </PreBuildEvent>
+    <RemotePreBuildEvent>
+      <Command>cd $(RemoteRootDir) &amp;&amp; $(VCPKG_ROOT)vcpkg install</Command>
+      <Message>Installing Dependencies:</Message>
+    </RemotePreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <ClCompile>
+      <CppLanguageStandard>c++17</CppLanguageStandard>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>easyloggingpp</LibraryDependencies>
+      <OutputFile>lib\$(TargetFileName)</OutputFile>
+    </Link>
+    <PreBuildEvent>
+      <AdditionalSourcesToCopyMapping>$(SolutionDir)vcpkg.json:=$(RemoteRootDir)/vcpkg.json</AdditionalSourcesToCopyMapping>
+    </PreBuildEvent>
+    <RemotePreBuildEvent>
+      <Command>cd $(RemoteRootDir) &amp;&amp; $(VCPKG_ROOT)vcpkg install</Command>
+      <Message>Installing Dependencies:</Message>
+    </RemotePreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <CppLanguageStandard>c++17</CppLanguageStandard>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>easyloggingpp</LibraryDependencies>
+      <OutputFile>lib\$(TargetFileName)</OutputFile>
+    </Link>
+    <PreBuildEvent>
+      <AdditionalSourcesToCopyMapping>$(SolutionDir)vcpkg.json:=$(RemoteRootDir)/vcpkg.json</AdditionalSourcesToCopyMapping>
+    </PreBuildEvent>
+    <RemotePreBuildEvent>
+      <Command>cd $(RemoteRootDir) &amp;&amp; $(VCPKG_ROOT)vcpkg install</Command>
+      <Message>Installing Dependencies:</Message>
+    </RemotePreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <ClCompile>
+      <CppLanguageStandard>c++17</CppLanguageStandard>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>easyloggingpp</LibraryDependencies>
+      <OutputFile>lib\$(TargetFileName)</OutputFile>
+    </Link>
+    <PreBuildEvent>
+      <AdditionalSourcesToCopyMapping>$(SolutionDir)vcpkg.json:=$(RemoteRootDir)/vcpkg.json</AdditionalSourcesToCopyMapping>
+    </PreBuildEvent>
+    <RemotePreBuildEvent>
+      <Command>cd $(RemoteRootDir) &amp;&amp; $(VCPKG_ROOT)vcpkg install</Command>
+      <Message>Installing Dependencies:</Message>
+    </RemotePreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <ClCompile>
+      <CppLanguageStandard>c++17</CppLanguageStandard>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>easyloggingpp</LibraryDependencies>
+      <OutputFile>lib\$(TargetFileName)</OutputFile>
+    </Link>
+    <PreBuildEvent>
+      <AdditionalSourcesToCopyMapping>$(SolutionDir)vcpkg.json:=$(RemoteRootDir)/vcpkg.json</AdditionalSourcesToCopyMapping>
+    </PreBuildEvent>
+    <RemotePreBuildEvent>
+      <Command>cd $(RemoteRootDir) &amp;&amp; $(VCPKG_ROOT)vcpkg install</Command>
+      <Message>Installing Dependencies:</Message>
+    </RemotePreBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

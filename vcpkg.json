@@ -1,0 +1,40 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "name": "openvr-walkinplace",
+  "version": "1.0.0",
+  "builtin-baseline": "6ebf8c123bc8077dc9216db6438eeabaa154c473",
+  "dependencies": [
+    {
+      "name": "boost-filesystem",
+      "version>=": "1.81.0#2"
+    },
+    {
+      "name": "boost-interprocess",
+      "version>=": "1.81.0#2"
+    },
+    {
+      "name": "boost-python",
+      "version>=": "1.81.0#2"
+    },
+    {
+      "name": "easyloggingpp",
+      "version>=": "9.97.1#1",
+      "features": [
+        "no-defaultfile",
+        "thread-safe"
+      ]
+    },
+    {
+      "name": "mlpack",
+      "version>=": "4.3.0#0"
+    },
+    {
+      "name": "openblas",
+      "version>=": "0.3.28#0"
+    },
+    {
+      "name": "openvr",
+      "version>=": "1.23.7#0"
+    }
+  ]
+}

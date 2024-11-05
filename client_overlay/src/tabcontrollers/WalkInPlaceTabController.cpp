@@ -8,6 +8,7 @@
 #include "../overlaycontroller.h"
 #include <openvr_math.h>
 #include <chrono>
+#include <boost/filesystem/directory.hpp>
 
 // application namespace
 namespace walkinplace {
