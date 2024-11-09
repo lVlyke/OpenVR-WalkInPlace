@@ -62,6 +62,7 @@ for index, elem in enumerate(qml_scan_dirs):
 
 qt_qml_dir = qt_install_dir+os.sep+'qml'
 qt_bin_dir = qt_install_dir+os.sep+'bin'
+qt_lib_dir = qt_install_dir+os.sep+'lib'
 qt_plugin_dir = qt_install_dir+os.sep+'plugins'
 
 qml_manual_imports = parsed_args['qml_import']
@@ -121,9 +122,9 @@ blacklist = [
 ]
 
 if not parsed_args["ignore_blacklist"]:
-    blacklist_url = 'https://raw.githubusercontent.com/probonopd/AppImages/master/excludelist'
+    blacklist_url = 'https://raw.githubusercontent.com/AppImageCommunity/pkg2appimage/refs/heads/master/excludelist'
     info('Updating blacklist from '+blacklist_url)
-    update_blacklist_cmd = 'wget --quiet '+blacklist_url+' -O - | sort | uniq | grep -v "^#.*" | grep "[^-\s]"'
+    update_blacklist_cmd = 'wget --quiet '+blacklist_url+' -O - | sort | uniq | grep -v "^#.*" | grep "[^-\\s]"'
     blacklist += os.popen(update_blacklist_cmd).read().split('\n')
 else:
     blacklist = []
@@ -220,7 +221,7 @@ def ldd(executable):
 def lddr(executable,libs):
     '''Get all library dependencies (recursive) of 'executable' '''
     try:
-        output = subprocess.check_output(["ldd", "-r", executable])
+        output = subprocess.check_output(["ldd", "-r", executable], env=dict(os.environ, LD_LIBRARY_PATH=qt_lib_dir))
     except subprocess.CalledProcessError as e:
         warn("CalledProcessError while running %s. Return code %s - output: %s" % (e.cmd,e.returncode,e.output))
         output = e.output
@@ -283,7 +284,7 @@ def qml_imports(path, lib_path):
     find = subprocess.Popen(('find', path), stdout=subprocess.PIPE)
     qml_files = ""
     try:
-        qml_files = subprocess.check_output(('grep', "\.qml$"), stdin=find.stdout)
+        qml_files = subprocess.check_output(('grep', r"\.qml$"), stdin=find.stdout)
     except subprocess.CalledProcessError as e:
         warn("No QML files found OR grep might have failed")
         qml_files = "" #raise RuntimeError("command '{}' return with error (code {}): {}".format(e.cmd, e.returncode, e.output))
@@ -296,9 +297,9 @@ def qml_imports(path, lib_path):
     for qml_file in qml_files:
         qml_file = qml_file.decode("utf-8").strip()
         if qml_file == '':
-            info("qml_file empty: "+qml_file)
+            debug("qml_file empty: "+qml_file)
             continue
-        info("qml_file not empty: "+qml_file)
+        debug("qml_file not empty: "+qml_file)
         qmlscanner_args.append(qml_file)
     # Alternative QML discovery (end)
 
@@ -499,8 +500,6 @@ def create_desktop_file(path):
 
 def build_appdir(dest_dir,executable,dependencies,qml_dirs,qt_plugins):
 
-    from distutils.dir_util import copy_tree
-
     if not os.path.exists(dest_dir):
         os.makedirs(dest_dir)
 
@@ -546,8 +545,8 @@ def build_appdir(dest_dir,executable,dependencies,qml_dirs,qt_plugins):
 
         if details['type'] == 'lib':
 
-            dst = dest_dir+os.sep+appdir_libs+os.sep+depCPY
-            debug("Copying library "+depCPY+": "+srcCPY+' -> '+dst)
+            dst = dest_dir+os.sep+appdir_libs+os.sep+os.path.basename(depCPY)
+            info("Copying library "+depCPY+": "+srcCPY+' -> '+dst)
             shutil.copyfile(srcCPY,dst) # overrides dest no questions asked
             strip(dst)
 
@@ -560,7 +559,7 @@ def build_appdir(dest_dir,executable,dependencies,qml_dirs,qt_plugins):
             src_dir = os.path.dirname(srcCPY)
 
             debug("Copying qml plugin dir "+depCPY+": "+src_dir+' -> '+dst_dir)
-            copy_tree(src_dir, dst_dir,update=1)
+            shutil.copytree(src_dir, dst_dir, dirs_exist_ok=True)
             strip(dst)
         else:
             debug("Unhandled type '%s' (%s)" % (details['type'],))
@@ -572,7 +571,7 @@ def build_appdir(dest_dir,executable,dependencies,qml_dirs,qt_plugins):
         dst_dir = dest_dir+os.sep+appdir_qml+os.sep+src_dir.replace(qt_qml_dir+os.sep,'',1)
 
         debug("Copying Qt qml dir "+qml_import+": "+src_dir+' -> '+dst_dir)
-        copy_tree(src_dir, dst_dir,update=1)
+        shutil.copytree(src_dir, dst_dir, dirs_exist_ok=True)
 
     for qt_plugin in qt_plugins:
 
@@ -588,8 +587,9 @@ def build_appdir(dest_dir,executable,dependencies,qml_dirs,qt_plugins):
     # Make qt.conf file
     create_qt_conf(dest_dir)
 
-    # Make default desktop file
-    create_desktop_file(dest_dir)
+    # Make default desktop file if not exists
+    if not os.path.exists(dest_dir+os.sep+"default.desktop"):
+        create_desktop_file(dest_dir)
 
     # Make AppRun symlink
     os.system('cd "'+dest_dir+'" && ln -s '+os.path.basename(executable)+' AppRun')
@@ -600,7 +600,7 @@ def build_appdir(dest_dir,executable,dependencies,qml_dirs,qt_plugins):
 
 def build_appimage(appdir,appimage):
     debug("Building AppImage %s from %s" % (appimage,appdir))
-    res = subprocess.call(('appimagetool', appdir, appimage))
+    res = subprocess.call(('./appimagetool', appdir, appimage), cwd=os.path.dirname(os.path.realpath(__file__)))
     return res
 
 def build_fake_qml(qml_import):

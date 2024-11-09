@@ -44,6 +44,78 @@
     <QtMoc Include="src\tabcontrollers\WalkInPlaceTabController.h" />
     <QtMoc Include="src\overlaycontroller.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\logging.conf">
+    </None>
+    <None Include="bin\x64\.DirIcon">
+    </None>
+    <None Include="bin\x64\default.desktop">
+    </None>
+    <None Include="bin\x64\LICENSE">
+    </None>
+    <None Include="bin\x64\manifest.vrmanifest">
+    </None>
+    <None Include="bin\x64\qt.conf">
+    </None>
+    <None Include="bin\x64\res\qml\backarrow.svg">
+    </None>
+    <None Include="bin\x64\res\qml\DataModelPage.qml">
+    </None>
+    <None Include="bin\x64\res\qml\DisableDevicePage.qml">
+    </None>
+    <None Include="bin\x64\res\qml\GraphPage.qml">
+    </None>
+    <None Include="bin\x64\res\qml\MainConfPage.qml">
+    </None>
+    <None Include="bin\x64\res\qml\mainwidget.qml">
+    </None>
+    <None Include="bin\x64\res\qml\MyComboBox.qml">
+    </None>
+    <None Include="bin\x64\res\qml\MyDialogOkCancelPopup.qml">
+    </None>
+    <None Include="bin\x64\res\qml\MyDialogOkPopup.qml">
+    </None>
+    <None Include="bin\x64\res\qml\MyInfoPopup.qml">
+    </None>
+    <None Include="bin\x64\res\qml\MyMainViewPage.qml">
+    </None>
+    <None Include="bin\x64\res\qml\MyPushButton.qml">
+    </None>
+    <None Include="bin\x64\res\qml\MyStackGraphPage.qml">
+    </None>
+    <None Include="bin\x64\res\qml\MyStackViewPage.qml">
+    </None>
+    <None Include="bin\x64\res\qml\MyTab.qml">
+    </None>
+    <None Include="bin\x64\res\qml\MyText.qml">
+    </None>
+    <None Include="bin\x64\res\qml\MyTextField.qml">
+    </None>
+    <None Include="bin\x64\res\qml\MyTimerPopup.qml">
+    </None>
+    <None Include="bin\x64\res\qml\MyToggleButton.qml">
+    </None>
+    <None Include="bin\x64\res\qml\PaceControlPage.qml">
+    </None>
+    <None Include="scripts\install_linux.sh">
+    </None>
+    <None Include="scripts\linuxdeployqt.py">
+    </None>
+    <None Include="scripts\package_linux.sh">
+    </None>
+    <None Include="scripts\uninstall_linux.sh">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="bin\x64\default.png">
+    </Image>
+    <Image Include="bin\x64\res\OVRWIP.ico">
+    </Image>
+    <Image Include="bin\x64\res\thumbicon.png">
+    </Image>
+    <Image Include="bin\x64\res\transparent.png">
+    </Image>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{50b93dc3-ef2e-4f7e-97cd-f27bcd89324b}</ProjectGuid>
     <Keyword>Linux</Keyword>
@@ -61,41 +133,49 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>Remote_GCC_1_0</PlatformToolset>
     <RemoteRootDir>/tmp/vsbuild/OpenVR-WalkInPlace</RemoteRootDir>
+    <RemoteProjectRelDir>client_overlay</RemoteProjectRelDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>Remote_GCC_1_0</PlatformToolset>
     <RemoteRootDir>/tmp/vsbuild/OpenVR-WalkInPlace</RemoteRootDir>
+    <RemoteProjectRelDir>client_overlay</RemoteProjectRelDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>Remote_GCC_1_0</PlatformToolset>
     <RemoteRootDir>/tmp/vsbuild/OpenVR-WalkInPlace</RemoteRootDir>
+    <RemoteProjectRelDir>client_overlay</RemoteProjectRelDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>Remote_GCC_1_0</PlatformToolset>
     <RemoteRootDir>/tmp/vsbuild/OpenVR-WalkInPlace</RemoteRootDir>
+    <RemoteProjectRelDir>client_overlay</RemoteProjectRelDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>Remote_GCC_1_0</PlatformToolset>
     <RemoteRootDir>/tmp/vsbuild/OpenVR-WalkInPlace</RemoteRootDir>
+    <RemoteProjectRelDir>client_overlay</RemoteProjectRelDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>Remote_GCC_1_0</PlatformToolset>
     <RemoteRootDir>/tmp/vsbuild/OpenVR-WalkInPlace</RemoteRootDir>
+    <RemoteProjectRelDir>client_overlay</RemoteProjectRelDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>Remote_GCC_1_0</PlatformToolset>
     <RemoteRootDir>/tmp/vsbuild/OpenVR-WalkInPlace</RemoteRootDir>
+    <RemoteProjectRelDir>client_overlay</RemoteProjectRelDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>Remote_GCC_1_0</PlatformToolset>
     <RemoteRootDir>/tmp/vsbuild/OpenVR-WalkInPlace</RemoteRootDir>
+    <RemoteProjectRelDir>client_overlay</RemoteProjectRelDir>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <Import Project="$(QtMsBuild)\qt_defaults.props" Condition="Exists('$(QtMsBuild)\qt_defaults.props')" />
@@ -187,58 +267,58 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-    <IncludePath>$(RemoteRootDir)/lib_vrwalkinplace_linux/include;$(IncludePath)</IncludePath>
+    <IncludePath>$(RemoteRootDir)/lib_vrwalkinplace/include;$(IncludePath)</IncludePath>
     <EnableIncrementalBuild>WithNinja</EnableIncrementalBuild>
     <MultiProcNumber>8</MultiProcNumber>
     <TargetName>OpenVR-WalkInPlaceOverlay</TargetName>
     <TargetExt />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
-    <IncludePath>$(RemoteRootDir)/lib_vrwalkinplace_linux/include;$(IncludePath)</IncludePath>
+    <IncludePath>$(RemoteRootDir)/lib_vrwalkinplace/include;$(IncludePath)</IncludePath>
     <EnableIncrementalBuild>WithNinja</EnableIncrementalBuild>
     <MultiProcNumber>8</MultiProcNumber>
     <TargetName>OpenVR-WalkInPlaceOverlay</TargetName>
     <TargetExt />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
-    <IncludePath>$(RemoteRootDir)/lib_vrwalkinplace_linux/include;$(IncludePath)</IncludePath>
+    <IncludePath>$(RemoteRootDir)/lib_vrwalkinplace/include;$(IncludePath)</IncludePath>
     <EnableIncrementalBuild>WithNinja</EnableIncrementalBuild>
     <MultiProcNumber>8</MultiProcNumber>
     <TargetName>OpenVR-WalkInPlaceOverlay</TargetName>
     <TargetExt />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
-    <IncludePath>$(RemoteRootDir)/lib_vrwalkinplace_linux/include;$(IncludePath)</IncludePath>
+    <IncludePath>$(RemoteRootDir)/lib_vrwalkinplace/include;$(IncludePath)</IncludePath>
     <EnableIncrementalBuild>WithNinja</EnableIncrementalBuild>
     <MultiProcNumber>8</MultiProcNumber>
     <TargetName>OpenVR-WalkInPlaceOverlay</TargetName>
     <TargetExt />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(RemoteRootDir)/lib_vrwalkinplace_linux/include;$(RemoteRootDir)/vcpkg_installed/x64-linux/include</IncludePath>
+    <IncludePath>$(RemoteRootDir)/lib_vrwalkinplace/include;$(RemoteRootDir)/vcpkg_installed/x64-linux/include</IncludePath>
     <EnableIncrementalBuild>WithNinja</EnableIncrementalBuild>
     <MultiProcNumber>8</MultiProcNumber>
     <TargetName>OpenVR-WalkInPlaceOverlay</TargetName>
     <TargetExt />
-    <LibraryPath>$(RemoteRootDir)/lib_vrwalkinplace_linux/bin/x64/Debug;$(RemoteRootDir)/vcpkg_installed/x64-linux/debug/lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(RemoteRootDir)/lib_vrwalkinplace/bin/x64/Debug;$(RemoteRootDir)/vcpkg_installed/x64-linux/debug/lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(RemoteRootDir)/lib_vrwalkinplace_linux/include;$(RemoteRootDir)/vcpkg_installed/x64-linux/include</IncludePath>
-    <LibraryPath>$(RemoteRootDir)/lib_vrwalkinplace_linux/bin/x64/Release;$(RemoteRootDir)/vcpkg_installed/x64-linux/lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(RemoteRootDir)/lib_vrwalkinplace/include;$(RemoteRootDir)/vcpkg_installed/x64-linux/include</IncludePath>
+    <LibraryPath>$(RemoteRootDir)/lib_vrwalkinplace/bin/x64/Release;$(RemoteRootDir)/vcpkg_installed/x64-linux/lib;$(LibraryPath)</LibraryPath>
     <EnableIncrementalBuild>WithNinja</EnableIncrementalBuild>
     <MultiProcNumber>8</MultiProcNumber>
     <TargetName>OpenVR-WalkInPlaceOverlay</TargetName>
     <TargetExt />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
-    <IncludePath>$(RemoteRootDir)/lib_vrwalkinplace_linux/include;$(IncludePath)</IncludePath>
+    <IncludePath>$(RemoteRootDir)/lib_vrwalkinplace/include;$(IncludePath)</IncludePath>
     <EnableIncrementalBuild>WithNinja</EnableIncrementalBuild>
     <MultiProcNumber>8</MultiProcNumber>
     <TargetName>OpenVR-WalkInPlaceOverlay</TargetName>
     <TargetExt />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
-    <IncludePath>$(RemoteRootDir)/lib_vrwalkinplace_linux/include;$(IncludePath)</IncludePath>
+    <IncludePath>$(RemoteRootDir)/lib_vrwalkinplace/include;$(IncludePath)</IncludePath>
     <EnableIncrementalBuild>WithNinja</EnableIncrementalBuild>
     <MultiProcNumber>8</MultiProcNumber>
     <TargetName>OpenVR-WalkInPlaceOverlay</TargetName>
@@ -270,6 +350,10 @@
     <RemotePreBuildEvent>
       <Message>Installing Dependencies:</Message>
     </RemotePreBuildEvent>
+    <RemotePostBuildEvent>
+      <Command>chmod -R +x $(RemoteProjectDir)scripts/ &amp;&amp; QT_PATH="$(QtPathBinaries)/.." $(RemoteProjectDir)scripts/package_linux.sh</Command>
+      <Message>Packaging app</Message>
+    </RemotePostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <ClCompile>
@@ -297,6 +381,10 @@
     <RemotePreBuildEvent>
       <Message>Installing Dependencies:</Message>
     </RemotePreBuildEvent>
+    <RemotePostBuildEvent>
+      <Command>chmod -R +x $(RemoteProjectDir)scripts/ &amp;&amp; QT_PATH="$(QtPathBinaries)/.." $(RemoteProjectDir)scripts/package_linux.sh</Command>
+      <Message>Packaging app</Message>
+    </RemotePostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <ClCompile>
@@ -324,6 +412,10 @@
     <RemotePreBuildEvent>
       <Message>Installing Dependencies:</Message>
     </RemotePreBuildEvent>
+    <RemotePostBuildEvent>
+      <Command>chmod -R +x $(RemoteProjectDir)scripts/ &amp;&amp; QT_PATH="$(QtPathBinaries)/.." $(RemoteProjectDir)scripts/package_linux.sh</Command>
+      <Message>Packaging app</Message>
+    </RemotePostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <ClCompile>
@@ -351,6 +443,10 @@
     <RemotePreBuildEvent>
       <Message>Installing Dependencies:</Message>
     </RemotePreBuildEvent>
+    <RemotePostBuildEvent>
+      <Command>chmod -R +x $(RemoteProjectDir)scripts/ &amp;&amp; QT_PATH="$(QtPathBinaries)/.." $(RemoteProjectDir)scripts/package_linux.sh</Command>
+      <Message>Packaging app</Message>
+    </RemotePostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -378,6 +474,10 @@
 </Command>
       <Message>Installing Dependencies:</Message>
     </RemotePreBuildEvent>
+    <RemotePostBuildEvent>
+      <Command>chmod -R +x $(RemoteProjectDir)scripts/ &amp;&amp; QT_PATH="$(QtPathBinaries)/.." $(RemoteProjectDir)scripts/package_linux.sh</Command>
+      <Message>Packaging app</Message>
+    </RemotePostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -406,6 +506,10 @@
     <RemotePreBuildEvent>
       <Message>Installing Dependencies:</Message>
     </RemotePreBuildEvent>
+    <RemotePostBuildEvent>
+      <Command>chmod -R +x $(RemoteProjectDir)scripts/ &amp;&amp; QT_PATH="$(QtPathBinaries)/.." $(RemoteProjectDir)scripts/package_linux.sh</Command>
+      <Message>Packaging app</Message>
+    </RemotePostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <ClCompile>
@@ -433,6 +537,10 @@
     <RemotePreBuildEvent>
       <Message>Installing Dependencies:</Message>
     </RemotePreBuildEvent>
+    <RemotePostBuildEvent>
+      <Command>chmod -R +x $(RemoteProjectDir)scripts/ &amp;&amp; QT_PATH="$(QtPathBinaries)/.." $(RemoteProjectDir)scripts/package_linux.sh</Command>
+      <Message>Packaging app</Message>
+    </RemotePostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <ClCompile>
@@ -460,6 +568,10 @@
     <RemotePreBuildEvent>
       <Message>Installing Dependencies:</Message>
     </RemotePreBuildEvent>
+    <RemotePostBuildEvent>
+      <Command>chmod -R +x $(RemoteProjectDir)scripts/ &amp;&amp; QT_PATH="$(QtPathBinaries)/.." $(RemoteProjectDir)scripts/package_linux.sh</Command>
+      <Message>Packaging app</Message>
+    </RemotePostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <Import Project="$(QtMsBuild)\qt.targets" Condition="Exists('$(QtMsBuild)\qt.targets')" />

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\com\shm\driver_ipc_shm.cpp" />
+    <ClCompile Include="src\driver\ServerDriver.cpp" />
+    <ClCompile Include="src\driver_vrwalkinplace.cpp" />
+    <ClCompile Include="src\virtualdevice\VirtualController.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\com\shm\driver_ipc_shm.h" />
+    <ClInclude Include="src\driver\ServerDriver.h" />
+    <ClInclude Include="src\logging.h" />
+    <ClInclude Include="src\virtualdevice\VirtualController.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{e6bd48b4-e5c9-4175-9a4d-6d01db4cfc1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\icons">
+      <UniqueIdentifier>{1285f846-c65a-454c-9c57-525be2ce4443}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\input">
+      <UniqueIdentifier>{9b1cdac1-79b9-40c5-950f-8efd002ddec5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\models">
+      <UniqueIdentifier>{3f41809a-a6f1-45ff-bbf2-ba0d4be5ac7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\settings">
+      <UniqueIdentifier>{7ff4e829-1752-4a57-8e4c-28b1fda946ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\models\ovrwip_controller">
+      <UniqueIdentifier>{863f2ab4-0104-4648-b065-ba830b2f1207}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\driver.vrresources">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="resources\icons\ovrwip_wand.svg">
+      <Filter>Resources\icons</Filter>
+    </None>
+    <None Include="resources\input\legacy_bindings_ovrwip_controller.json">
+      <Filter>Resources\input</Filter>
+    </None>
+    <None Include="resources\input\ovrwip_controller_profile.json">
+      <Filter>Resources\input</Filter>
+    </None>
+    <None Include="resources\settings\default.vrsettings">
+      <Filter>Resources\settings</Filter>
+    </None>
+    <None Include="resources\models\ovrwip_controller\arrow.mtl">
+      <Filter>Resources\models\ovrwip_controller</Filter>
+    </None>
+    <None Include="driver.vrdrivermanifest">
+      <Filter>Resources</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\models\ovrwip_controller\arrow.tga">
+      <Filter>Resources\models\ovrwip_controller</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

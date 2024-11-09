@@ -26,10 +26,128 @@
     <Filter Include="Source Files">
       <UniqueIdentifier>{e78b34dd-a654-40f7-b564-511d9a390376}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{17753560-6dcc-4d78-a8fb-eaa0868975ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\scripts">
+      <UniqueIdentifier>{f08805e3-6373-4e19-9d42-c1cb8e29090b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\res">
+      <UniqueIdentifier>{bb8fa5a2-f673-4548-8c42-163605fea6d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\res\qml">
+      <UniqueIdentifier>{212fccb5-249e-4223-abd4-bd7418855c67}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\logging.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="scripts\uninstall_linux.sh">
+      <Filter>Resources\scripts</Filter>
+    </None>
+    <None Include="scripts\install_linux.sh">
+      <Filter>Resources\scripts</Filter>
+    </None>
+    <None Include="scripts\linuxdeployqt.py">
+      <Filter>Resources\scripts</Filter>
+    </None>
+    <None Include="scripts\package_linux.sh">
+      <Filter>Resources\scripts</Filter>
+    </None>
+    <None Include="bin\x64\.DirIcon">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="bin\x64\default.desktop">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="bin\x64\LICENSE">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="bin\x64\manifest.vrmanifest">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="bin\x64\qt.conf">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="bin\logging.conf">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="bin\x64\res\qml\backarrow.svg">
+      <Filter>Resources\res\qml</Filter>
+    </None>
+    <None Include="bin\x64\res\qml\DataModelPage.qml">
+      <Filter>Resources\res\qml</Filter>
+    </None>
+    <None Include="bin\x64\res\qml\DisableDevicePage.qml">
+      <Filter>Resources\res\qml</Filter>
+    </None>
+    <None Include="bin\x64\res\qml\GraphPage.qml">
+      <Filter>Resources\res\qml</Filter>
+    </None>
+    <None Include="bin\x64\res\qml\MainConfPage.qml">
+      <Filter>Resources\res\qml</Filter>
+    </None>
+    <None Include="bin\x64\res\qml\mainwidget.qml">
+      <Filter>Resources\res\qml</Filter>
+    </None>
+    <None Include="bin\x64\res\qml\MyComboBox.qml">
+      <Filter>Resources\res\qml</Filter>
+    </None>
+    <None Include="bin\x64\res\qml\MyDialogOkCancelPopup.qml">
+      <Filter>Resources\res\qml</Filter>
+    </None>
+    <None Include="bin\x64\res\qml\MyDialogOkPopup.qml">
+      <Filter>Resources\res\qml</Filter>
+    </None>
+    <None Include="bin\x64\res\qml\MyInfoPopup.qml">
+      <Filter>Resources\res\qml</Filter>
+    </None>
+    <None Include="bin\x64\res\qml\MyMainViewPage.qml">
+      <Filter>Resources\res\qml</Filter>
+    </None>
+    <None Include="bin\x64\res\qml\MyPushButton.qml">
+      <Filter>Resources\res\qml</Filter>
+    </None>
+    <None Include="bin\x64\res\qml\MyStackGraphPage.qml">
+      <Filter>Resources\res\qml</Filter>
+    </None>
+    <None Include="bin\x64\res\qml\MyStackViewPage.qml">
+      <Filter>Resources\res\qml</Filter>
+    </None>
+    <None Include="bin\x64\res\qml\MyTab.qml">
+      <Filter>Resources\res\qml</Filter>
+    </None>
+    <None Include="bin\x64\res\qml\MyText.qml">
+      <Filter>Resources\res\qml</Filter>
+    </None>
+    <None Include="bin\x64\res\qml\MyTextField.qml">
+      <Filter>Resources\res\qml</Filter>
+    </None>
+    <None Include="bin\x64\res\qml\MyTimerPopup.qml">
+      <Filter>Resources\res\qml</Filter>
+    </None>
+    <None Include="bin\x64\res\qml\MyToggleButton.qml">
+      <Filter>Resources\res\qml</Filter>
+    </None>
+    <None Include="bin\x64\res\qml\PaceControlPage.qml">
+      <Filter>Resources\res\qml</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="bin\x64\default.png">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="bin\x64\res\OVRWIP.ico">
+      <Filter>Resources\res</Filter>
+    </Image>
+    <Image Include="bin\x64\res\thumbicon.png">
+      <Filter>Resources\res</Filter>
+    </Image>
+    <Image Include="bin\x64\res\transparent.png">
+      <Filter>Resources\res</Filter>
+    </Image>
   </ItemGroup>
 </Project>

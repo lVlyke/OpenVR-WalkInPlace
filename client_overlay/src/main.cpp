@@ -237,7 +237,7 @@ int main(int argc, char *argv[]) {
 		QString logFilePath;
 		START_EASYLOGGINGPP(argc, argv);
 		el::Loggers::addFlag(el::LoggingFlag::DisableApplicationAbortOnFatalLog);
-		auto logconfigfile = QFileInfo(logConfigFileName).absoluteFilePath();
+		auto logconfigfile = QCoreApplication::applicationDirPath() + slash.c_str() + logConfigFileName;
 		el::Configurations conf;
 		if (QFile::exists(logconfigfile)) {
 			conf.parseFromFile(logconfigfile.toStdString());
@@ -275,7 +275,7 @@ int main(int argc, char *argv[]) {
 		walkinplace::OverlayController* controller = walkinplace::OverlayController::createInstance(desktopMode, noSound);
 		controller->Init(&qmlEngine);
 
-        QQmlComponent component(&qmlEngine, QUrl::fromLocalFile( QFileInfo("res/qml/mainwidget.qml").absoluteFilePath() ));
+        QQmlComponent component(&qmlEngine, QUrl::fromLocalFile( QCoreApplication::applicationDirPath() + "/res/qml/mainwidget.qml" ));
 		auto errors = component.errors();
 		for (auto& e : errors) {
 			LOG(ERROR) << "QML Error: " << e.toString().toStdString() << std::endl;
